@@ -4,8 +4,6 @@ import {
   Clock,
   MapPin,
   Plus,
-  CheckCircle,
-  XCircle,
   AlertCircle,
   User,
 } from 'lucide-react';

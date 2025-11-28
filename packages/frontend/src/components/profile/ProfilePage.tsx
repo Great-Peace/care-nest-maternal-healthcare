@@ -40,7 +40,7 @@ export const ProfilePage: React.FC = () => {
       fullName: user.fullName,
       phoneNumber: user.phoneNumber,
       dateOfBirth: user.dateOfBirth,
-      address: user.address,
+      address: user.address || '',
       preferredHealthFacility: user.preferredHealthFacility || '',
     });
     setIsEditing(false);
