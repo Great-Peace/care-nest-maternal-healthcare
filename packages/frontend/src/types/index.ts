@@ -20,6 +20,8 @@ export interface UserData {
   kinAddress: string;
   emergencyContact: string;
   preferredHospital: string;
+  preferredHealthFacility?: string;
+  address?: string;
   language: 'english' | 'kinyarwanda' | 'french';
   createdAt?: Date;
   updatedAt?: Date;

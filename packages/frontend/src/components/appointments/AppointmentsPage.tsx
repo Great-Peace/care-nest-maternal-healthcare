@@ -79,19 +79,6 @@ export const AppointmentsPage: React.FC = () => {
     (apt) => filter === 'all' || apt.status === filter
   );
 
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'upcoming':
-        return <Clock className="text-blue-600" size={20} />;
-      case 'completed':
-        return <CheckCircle className="text-green-600" size={20} />;
-      case 'cancelled':
-        return <XCircle className="text-red-600" size={20} />;
-      default:
-        return <AlertCircle className="text-gray-600" size={20} />;
-    }
-  };
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'upcoming':

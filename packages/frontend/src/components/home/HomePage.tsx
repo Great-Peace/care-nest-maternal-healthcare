@@ -42,11 +42,6 @@ export const HomePage: React.FC = () => {
     return date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
   };
 
-  // Format time
-  const formatTime = (date: Date) => {
-    return date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
-  };
-
   return (
     <div className="space-y-6">
       {/* Notification Banner */}
