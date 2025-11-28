@@ -1,0 +1,25 @@
+services:
+  # Backend API
+  - type: web
+    name: carenest-backend
+    runtime: node
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: cd packages/backend && npm install && npm run build
+    startCommand: cd packages/backend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: CORS_ORIGIN
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DATABASE_PATH
+        value: /opt/render/project/src/packages/backend/data/carenest.db
+    disk:
+      name: carenest-data
+      mountPath: /opt/render/project/src/packages/backend/data
+      sizeGB: 1

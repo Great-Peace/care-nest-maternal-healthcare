@@ -1,0 +1,33 @@
+{
+  "name": "carenest",
+  "version": "1.0.0",
+  "description": "Empowering Mothers, Nurturing Life - Antenatal and Postnatal Care Platform",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "install:all": "npm install && npm run install:backend && npm run install:frontend",
+    "install:backend": "cd packages/backend && npm install",
+    "install:frontend": "cd packages/frontend && npm install",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd packages/backend && npm run dev",
+    "dev:frontend": "cd packages/frontend && npm run dev",
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:backend": "cd packages/backend && npm run build",
+    "build:frontend": "cd packages/frontend && npm run build"
+  },
+  "keywords": [
+    "healthcare",
+    "maternal-health",
+    "pregnancy",
+    "antenatal-care",
+    "postnatal-care"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "@esbuild/darwin-x64": "^0.27.0"
+  }
+}
