@@ -27,7 +27,7 @@
   "devDependencies": {
     "concurrently": "^8.2.2"
   },
-  "dependencies": {
+  "optionalDependencies": {
     "@esbuild/darwin-x64": "^0.27.0"
   }
 }
