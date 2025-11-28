@@ -9,7 +9,7 @@ if (!fs.existsSync(dataDir)) {
 }
 
 const dbPath = path.join(dataDir, 'carenest.db');
-const db = new Database(dbPath);
+const db: Database.Database = new Database(dbPath);
 
 // Enable foreign keys
 db.pragma('foreign_keys = ON');
